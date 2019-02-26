@@ -1,0 +1,54 @@
+.chips {
+    display: inline-block;
+    color: $white;
+    font-size: $sub-font-size;
+    text-transform: uppercase;
+    font-weight: $bold;
+    border-radius: $default-radius;
+    padding: 5px $spacing-1;
+    vertical-align: middle;
+
+    // THEMES
+    &.chips-primary {
+        background-color: $lightblue;
+    }
+    
+    &.chips-success {
+        background-color: $darkgreen;
+    }
+    
+    &.chips-warning {
+        background-color: $orange;
+    }
+
+    &.chips-inactive {
+        background-color: $gray;
+    }
+
+    &.chips-danger {
+        background-color: $red;
+    }
+
+    &.chips-purple {
+        background-color: $purple;
+    }
+
+    &.chips-white {
+        color: $blue;
+        background-color: $white;
+    }
+
+    // SIZES
+    &.chips-small {
+        font-size: $min-font-size;
+        padding: 2px 5px;
+    }
+    
+    // TYPES
+    &.chips-indication {
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        border-radius: 50%;
+    }
+}

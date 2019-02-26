@@ -1,0 +1,40 @@
+{
+	"reference-document.document" : "Document",
+	"reference-document.document.type" : "Type",
+	"reference-document": {
+		"domain": {
+				"operation-type": "Operation Type"
+		},
+		"enum": {
+				"operation-type": {
+		        	"entrance": "Entrance",
+		        	"departure": "Departure"
+        		},
+        		
+        		"document-type": {
+		        	"danfe": "DANFE",
+		       	 	"invoice": "INVOICE",
+		        	"manual":"MANUAL",
+		        	"outbound-invoice": "OUTBOUND INVOICE"
+        		}
+		},
+		"grouped" : {
+        	  "type" : {
+        	  	  "enum" : {
+        	  	     "danfe" : "DANFE",
+        	  	     "invoice" : "INVOICE",
+        	  	     "di" : "DI",
+        	  	     "invoice" : "Invoice",
+        	  	     "outbound_invoice" : "OUTBOUND INVOICE",
+        	  	     "manual": "MANUAL",
+        	  	     "volume" : "Volume"
+        	  	  }
+        	  }
+        }
+    },
+
+    "error.reference.document.rejected.status" : "Document unavailable",
+	"error.reference.document.blocked.status" : "Document unavailable",
+	"error.reference.document.deleted.status" : "Document unavailable",
+	"error.reference.document.canceled.status" : "Document unavailable"    
+}

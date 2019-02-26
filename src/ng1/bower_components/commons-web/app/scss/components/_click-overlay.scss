@@ -1,0 +1,18 @@
+.click-overlay {
+    .click-overlay-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: $z-index-overlay;
+        cursor: pointer;
+        background-color: rgba($black, .2);
+        @extend .fade-in;
+    }
+
+    .click-overlay-content {
+        position: relative;
+        z-index: $z-index-overlay + 1;
+    }
+}

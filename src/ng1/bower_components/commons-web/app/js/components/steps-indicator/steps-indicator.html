@@ -1,0 +1,9 @@
+<ul class="steps-indicator">
+    <li ng-if="stepsIndicatorCtrl.isVisible(step)" 
+        ng-repeat="step in stepsIndicatorCtrl.steps" 
+        ng-class="stepsIndicatorCtrl.stringifyStepClass($index)">
+        <div ng-hide="stepsIndicatorCtrl.isDone($index)" class="step-number" ng-bind="stepsIndicatorCtrl.getStepIndex(step)"></div>
+        <div ng-show="stepsIndicatorCtrl.isDone($index)" class="step-number"><i class="material-icons">check</i></div>
+        <div class="step-title hidden-xs" translate="{{step.translationKey}}"></div>
+    </li>
+</ul>

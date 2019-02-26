@@ -1,0 +1,35 @@
+{
+    "error.is.activated": "O registro já está ativado.",
+    "error.is.inactivated": "O registro já está inativado.",
+
+    "error.access.denied.exception": "Você não tem permissão para acessar essa funcionalidade.",
+    "error.server.error": "Ocorreu um erro no servidor",
+    "error.generic.error": "Ocorreu um erro desconhecido.",
+
+    "messages.error.minLenghtField": "Por favor digite pelo menos {{minlength}} caracteres",
+    "messages.error.requiredField": "Este campo é obrigatório.",
+    "messages.error.requiredFields": "Preencha os campos obrigatórios.",
+    "messages.error.no.results.found": "Nenhum resultado encontrado para '{{text}}'",
+    "messages.error.please.fill.all.fields": "Favor preencher todos campos.",
+
+    "error.defaultMsg": "Adicione mensagem de erro para {0}",
+    "error.email": "Digite um endereço de email válido",
+    "error.minlength": "Digite pelo menos {0} caracteres",
+    "error.maxlength": "Você digitou mais do que o máximo de {0} caracteres",
+    "error.min": "Digite um número maior ou igual a {0}",
+    "error.max": "Digite um número menor ou igual a {0}",
+    "error.required": "Este campo é obrigatório",
+    "error.date": "Digite uma data válida",
+    "error.time": "Digite uma hora válida",
+    "error.pattern": "A informação digitada não segue o padrão correto",
+    "error.number": "Digite um número válido",
+    "error.url": "Digite uma URL válida no formato http(s)://www.google.com",
+    "error.lesEqualsValidator": "Digite a confirmação corretamente",
+    "error.lesMinLengthValidator": "Adicione pelo menos {0} itens à lista",
+    "error.lesEqualsLengthValidator": "Adicione {0} itens à lista",
+    "error.minTags": "Adicione pelo menos {0} itens no campo",
+    "error.maxTags": "Adicione no máximo {0} itens no campo",
+    "error.leftoverText": "Digite corretamente o item no campo",
+    "error.lesAlphanumericValidator": "Digite apenas caracteres alfanuméricos",
+    "error.lesStringTimeValidator": "Digite no formato 00d 00h 00m"
+}

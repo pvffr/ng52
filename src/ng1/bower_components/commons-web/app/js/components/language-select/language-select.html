@@ -1,0 +1,9 @@
+ <span class="language-selection">
+    <span ng-repeat="lang in languageSelectCtrl.availableLanguages">
+        <a href 
+            id="language-{{lang.code}}"
+            ng-click="languageSelectCtrl.changeLanguage(lang)" 
+            ng-disabled="languageSelectCtrl.currentLang.code === lang.code">{{ lang.displayName }}</a>
+        <span ng-show="!$last">•</span>
+    </span>
+ </span>

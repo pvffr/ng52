@@ -1,0 +1,30 @@
+.popover {
+    border-radius: $default-radius;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border: 0;
+    padding: 7px 15px;
+    z-index: $z-index-tooltip;
+
+    .popover-title {
+        border: 0;
+        text-transform: uppercase;
+        color: $lightblue;
+        font-weight: bold;
+        background: $white;
+    }
+
+    * {
+        padding: 0;
+    }
+    
+    .popover-content {
+        font-size: $sub-font-size;
+        font-family: $font-family-roboto;
+        color: $darkgray;
+    }
+
+    .arrow {
+        display: none;
+    }
+}

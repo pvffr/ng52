@@ -1,0 +1,88 @@
+.alert {
+    @extend .horizontal-flex;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border: 0;
+    border-left: 10px solid $gray-90;
+    color: $darkgray;
+    font-size: $featured-font-size;
+    border-radius: 0;
+
+    .fa,
+    i {
+        min-width: 26px;
+        margin: 0 15px 0 0;
+    }
+
+    .fa:first-child {
+        color: inherit;
+    }
+
+    &.success {
+        border-color: $green;
+
+        .fa {
+            @extend .fa-check-circle;
+        }
+        
+        .fa,
+        i {
+            color: $green;
+        }
+    }
+
+    &.info {
+        border-left-color: adjust-hue(darken($lightblue, 1), 4);
+
+        .fa {
+            @extend .fa-info-circle;
+        }
+        
+        .fa,
+        i {
+            color: adjust-hue(darken($lightblue, 1), 4);
+        }
+    }
+
+    &.info.gray {
+        @extend .featured-block;
+        border-left-color: $gray;
+
+        .fa {
+            @extend .fa-info-circle;
+        }
+        
+        .fa,
+        i {
+            color: $gray;
+        }
+    }
+
+    &.error {
+        border-left-color: $red;
+        color: $red;
+
+        .fa {
+            @extend .fa-ban;
+        }
+        
+        .fa,
+        i {
+            color: $red;
+        }
+    }
+
+    &.warning {
+        border-left-color: $orange;
+        color: $orange;
+        
+        .fa {
+            @extend .fa-exclamation-triangle;
+        }
+        
+        .fa,
+        i {
+            color: $orange;
+        }
+    }
+}

@@ -1,0 +1,240 @@
+.chosen-container {
+    @extend .form-control;
+    width: auto !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    border-radius: $default-radius;
+    padding: 0;
+
+    .chosen-drop {
+        z-index: 3;
+    }
+
+    .chosen-results {
+        margin-top: 4px;
+        
+        li {
+            @extend .form-control;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            overflow: hidden;
+            padding-top: 11px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &.highlighted {
+                background: $lightblue;
+            }
+
+            .checkbox {
+                padding: $spacing-1;
+            }
+        }
+    }
+
+    &.chosen-with-drop {
+        .chosen-drop {
+            left: -1px;
+            width: calc(100% + 2px);
+            border: 1px solid $gray-80;
+        }
+
+        &.chosen-container-multi {
+            .chosen-drop {
+                margin-top: 1px;
+            }
+        }
+    }
+}
+
+.chosen-container-single {
+    .chosen-search input {
+        @extend .form-control;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .chosen-drop {
+        border-radius: 0 0 $default-radius $default-radius;
+        z-index: 3;
+    }
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+    color: $gray;
+    font-family: $font-family-roboto;
+}
+
+.chosen-container-multi {
+    height: auto;
+    min-height: 40px;
+    transition: border-color $faster-transition, box-shadow $faster-transition;
+    
+    &.chosen-container-active {
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        border-color: rgb(102,175,233);
+    }
+}
+.chosen-container-active.chosen-with-drop .chosen-single,
+.chosen-container-multi .chosen-choices,
+.chosen-container-single .chosen-single {
+    margin: 0;
+    height: 100%;
+    box-shadow: 0 0 0;
+    border: 0;
+    background: transparent;
+    padding: 0;
+
+    div:hover,
+    div:focus,
+    div:active {
+        background-color: transparent;
+    }
+
+    span {
+        height: 100%;
+    }
+}
+
+.chosen-container-multi .chosen-choices {
+    border-radius: $default-radius;
+    background: transparent;
+    padding: 5px 12px;
+}
+
+.chosen-container-multi .chosen-results {
+    padding: 5px 0;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div,
+.chosen-container-single .chosen-single div {
+    @extend .btn;
+    @extend .btn-default;
+    width: 50px;
+    border-width: 0;
+    border-left-width: 1px;
+    right: -1px;
+    top: -1px;
+    height: 41px;
+    border-radius: 0 $default-radius $default-radius 0;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single span,
+.chosen-container-single .chosen-single span {
+    padding: 7px 41px 7px 16px;
+    color: $gray;
+    font-size: $featured-font-size;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -15px 0;
+}
+
+.chosen-container-single .chosen-single div b {
+    background-position: 3px 0;
+}
+
+.chosen-container-multi .chosen-choices li.search-choice {
+    box-shadow: none;
+    border: none;
+    border-radius: 20px;
+    background: $blue;
+    padding: 5px $spacing-3 5px $spacing-1;
+    color: $white;
+
+    .search-choice-close {
+        top: 7px;
+        right: $spacing-1;
+        filter: brightness(100);
+        height: 11px;
+
+        &,
+        &:hover {
+            background-position: -42px 0;
+        }
+    }
+}
+
+.chosen-disabled {
+    background-color: lighten($gray-90, 3);
+
+    * {
+        cursor: not-allowed !important;
+    }
+}
+
+.chosen-container-single .chosen-single abbr,
+.chosen-container-single .chosen-single div b,
+.chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+.chosen-container .chosen-results-scroll-down span,
+.chosen-container .chosen-results-scroll-up span {
+    background-image: url('../img/chosen/chosen-sprite.png') !important;
+}
+
+.chosen-rtl .chosen-search input[type="text"],
+.chosen-container-single .chosen-search input[type="text"] {
+    background-image: none !important;
+}
+
+.chosen-container-single .chosen-search .has-error input[type="text"],
+.chosen-container .chosen-results .has-error li,
+.has-error .chosen-container,
+.has-error .chosen-container-single .chosen-search input[type="text"],
+.has-error .chosen-container .chosen-results li {
+    border-color: $red;
+}
+
+.chosen-container-single .chosen-search .has-error input[type="text"]:focus,
+.chosen-container .chosen-results .has-error li:focus,
+.has-error .chosen-container-single .chosen-search input[type="text"]:focus,
+.has-error .chosen-container .chosen-results li:focus,
+.has-error .chosen-container:focus,
+.has-error .chosen-container-multi.chosen-container-active {
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px $red;
+    border-color: $red;
+}
+
+// https://github.com/leocaseiro/angular-chosen/issues/169
+.localytics-chosen {
+    display: block !important;
+    position:absolute;
+    clip:rect(0,0,0,0);
+    height: 29px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+    .chosen-container-single .chosen-single abbr,
+    .chosen-container-single .chosen-single div b,
+    .chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+    .chosen-container .chosen-results-scroll-down span,
+    .chosen-container .chosen-results-scroll-up span {
+        background-image: url('../img/chosen/chosen-sprite@2x.png') !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .chosen-well-set {
+        &.chosen-container-active.chosen-with-drop .chosen-single div,
+        &.chosen-container-single .chosen-single div {
+            width: 35px;
+            padding-right: 8px;
+            padding-left: 8px;
+        }
+
+        &.chosen-container-active.chosen-with-drop .chosen-single span,
+        &.chosen-container-single .chosen-single span {
+            padding-right: 6px;
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .chosen-container,
+    .chosen-container-single .chosen-drop,
+    .chosen-container-multi .chosen-choices {
+        border-radius: 0;
+    }
+}

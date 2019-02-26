@@ -1,0 +1,10 @@
+<div  class="growl-container" ng-class="wrapperClasses()">
+    <div class="growl-item {{message.severity}}" ng-repeat="message in growlMessages.directives[referenceId].messages" ng-class="alertClasses(message)" ng-click="stopTimeoutClose(message)">
+        <i class="fa"></i>
+        <div class="flex-full-width">
+          <h4 class="growl-title" ng-show="message.title" ng-bind="message.title"></h4>
+          <div class="growl-message" ng-bind-html="message.text"></div>
+        </div>
+        <button type="button" class="close" aria-hidden="true" ng-click="growlMessages.deleteMessage(message)" ng-show="!message.disableCloseButton">&times;</button>
+    </div>
+</div>

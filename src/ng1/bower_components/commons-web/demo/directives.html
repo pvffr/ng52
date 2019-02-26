@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html ng-app="exampleApp">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../bower_components/chosen/chosen.css" />
+    <link rel="stylesheet" href="../bower_components/ng-table/dist/ng-table.min.css" />
+    <link rel="stylesheet" href="../bower_components/angular-growl-v2/build/angular-growl.min.css" />
+    <link rel="stylesheet" href="../bower_components/angular-ui-switch/angular-ui-switch.min.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/css/main.css">
+</head>
+
+<body ng-controller="MainCtrl as main">
+    <div growl></div>
+    <div class="application">
+        <top></top>
+        <div class="header">
+            <div class="title">
+                <h1>Diretivas</h1>
+                <i class="fa fa-question-circle" aria-hidden="true" uib-popover="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum pulvinar enim eget pulvinar." popover-title="Sobre esta tela" popover-placement="right" popover-is-open="showingHelp"
+                    ng-class="showingHelp ? 'active' : ''"></i>
+            </div>
+            <p class="breadcrumbs">
+                Páginal Inicial /
+            </p>
+            <div class="topic gray">
+                Gerenciar Ciclo
+            </div>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="box-content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table ng-table="main.tableParams" class="table">
+                                <tr ng-repeat="user in $data">
+                                    <td title="'Id'" sortable="'id'" header-class="'table-width-10'">{{user.id}}</td>
+                                    <td title="'Login'" sortable="'login'" header-class="'table-width-10'">{{user.login}}</td>
+                                    <td title="'Hash'" header-class="'table-width-80'">{{user.login + user.id}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <div class="box">
+                        <div class="topic">Notificações</div>
+                        <div class="box-content">
+                            <button type="button" class="btn btn-primary" ng-click="main.notify('O transporte apontado não está em sua doca de destino correta e/ou sua operação não é de entrega.')">Exibir</button>
+                            <div class="sub-topic">Modal</div>
+                            <button type="button" class="btn btn-default" ng-click="main.openModal()">Exibir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="box">
+                        <div class="topic">Formulário</div>
+                        <div class="box-content">
+                            <form>
+                                <div class="form-group">
+                                    <label for="select1" class="required">Site</label>
+                                    <select chosen placeholder-text-single="'Selecione o site de trabalho'" ng-model="main.sites" ng-options="site.name + ' (' + site.abbreviation + ')' for site in main.allSites" id="select1">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="select2">Postos de trabalho</label>
+                                    <select chosen multiple placeholder-text-multiple="'Selecione o posto de trabalho atual'" ng-model="main.stations" ng-options="station.name for station in main.allStations" id="select2">
+                                        <option value=""></option>
+                                    </select>
+                                    <p class="sub-text">Ex: Doca F58, Portaria, Doca F200, etc.</p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="notify">Receber notificação</label>
+                                    <switch id="notify" ng-model="enabled"></switch>
+                                </div>
+                                <div class="form-group">
+                                    <label for="remove">Remover todos</label>
+                                    <switch id="remove" class="disabled"></switch>
+                                </div>
+                                <div class="form-group">
+                                    <label>Selecione status</label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" />
+                                        <i class="input-helper"></i> Em andamento
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Opções</label>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            <i class="input-helper"></i> Selecionado
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            <i class="input-helper"></i> Ativo
+                                        </label>
+                                    </div>
+                                    <div class="radio disabled">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                            <i class="input-helper"></i> Desabilitado
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <input type="submit" class="btn btn-block btn-default" value="Confirmar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="box">
+                        <div class="topic">Botões</div>
+                        <div class="box-content">
+                            <button type="button" class="btn btn-default">Default</button>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-success">Success</button>
+                            <button type="button" class="btn btn-danger">Danger</button>
+
+                            <br/>
+                            <br/>
+
+                            <div class="btn-group" uib-dropdown is-open="status.isopen">
+                                <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+                                    Dropdown <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                                    <li role="menuitem"><a href="#">Action</a></li>
+                                    <li role="menuitem"><a href="#">Another action</a></li>
+                                    <li role="menuitem"><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li role="menuitem"><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group" uib-dropdown>
+                                <button id="split-button" type="button" class="btn btn-danger">Action</button>
+                                <button type="button" class="btn btn-danger" uib-dropdown-toggle>
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Split button!</span>
+                                </button>
+                                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                    <li role="menuitem"><a href="#">Action</a></li>
+                                    <li role="menuitem"><a href="#">Another action</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="topic">Avisos</div>
+                        <div class="box-content">
+
+                            <div class="alert success">
+                                <i class="fa"></i>
+                                <p>Pedido de agendamento enviado com sucesso!</p>
+                            </div>
+                            <div class="alert error">
+                                <i class="fa"></i>
+                                <p>Ocorreu um erro!</p>
+                            </div>
+                            <div class="alert info gray">
+                                <i class="fa"></i>
+                                <p>
+                                    LOCAL: Faria Lima - São José dos Campos (SJK)
+                                    <br> SENHA: SJK0101
+                                </p>
+                            </div>
+                            <div class="alert info">
+                                <i class="fa"></i>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum pulvinar enim eget pulvinar. Sed consequat nisl nunc, ut mattis nulla interdum pellentesque. Mauris eget orci odio. Sed vehicula, nulla ut auctor
+                                    faucibus, mi nibh placerat eros, at tempus risus nisl quis nibh. Pellentesque augue nibh, finibus non justo at, porta pretium justo. Vivamus posuere malesuada risus, ut iaculis leo fermentum quis. Nulla iaculis semper
+                                    lectus, ac consequat ligula sodales at. Ut lacinia turpis ultrices lorem blandit, et elementum nisl ullamcorper. Donec et lorem purus. Donec elit odio, ultricies aliquet ligula eget, sagittis luctus massa. Nunc luctus,
+                                    mi at fringilla sollicitudin, nisi odio pharetra odio, sed porta urna nunc vitae odio.</p>
+                            </div>
+                            <p>Você receberá por e-mail e SMS a confirmação com mais detalhes da rota, local e horário de seu agendamento. Caso tenha efetuado uma proposta você receberá os dados após o pedido ser aprovado ou cancelado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="footer">
+            Copyright @ 2016
+            <br/>
+            <a href="#">Página Inicial</a> |
+            <a href="#">Mensagens e alertas</a> |
+            <a href="#">Logs</a> |
+            <a href="#">Ajuda e Suporte</a>
+        </p>
+    </div>
+</body>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-chosen-localytics/dist/angular-chosen.min.js"></script>
+<script src="../bower_components/chosen/chosen.jquery.js"></script>
+<script src="../bower_components/angular-growl-v2/build/angular-growl.min.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="../bower_components/ng-table/dist/ng-table.min.js"></script>
+<script src="../bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<script src="../dist/js/commons-web.min.js"></script>
+<script src="../dist/js/templates.js"></script>
+
+<script src="exampleApp.js"></script>
+
+</html>

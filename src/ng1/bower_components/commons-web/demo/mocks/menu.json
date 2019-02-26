@@ -1,0 +1,96 @@
+[{
+    "url": "/les/#/main",
+    "iconClass": "home",
+    "label": "menu.home",
+    "submenus": []
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.yard.control",
+    "submenus": [{
+        "url": "/les/shipment/#/shipment-panel",
+        "iconClass": null,
+        "label": "menu.submenu.list.shipment",
+        "submenus": []
+    }, {
+        "url": "/les/shipment/#/shipment-unload",
+        "iconClass": null,
+        "label": "menu.submenu.unload",
+        "submenus": []
+    }]
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.public.area",
+    "submenus": [{
+        "url": "/les/shipment/#/shipment-arrival",
+        "iconClass": null,
+        "label": "menu.submenu.arrival.without.shceduling",
+        "submenus": []
+    }]
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.inspection",
+    "submenus": [{
+        "url": "/les/business-process/#/material-inspection",
+        "iconClass": null,
+        "label": "menu.submenu.material.inspection",
+        "submenus": []
+    }, {
+        "url": "/les/business-process/#/volume-inspection",
+        "iconClass": null,
+        "label": "menu.submenu.volume.inspection",
+        "submenus": []
+    }, {
+        "url": "/les/business-process/#/batch-storage",
+        "iconClass": null,
+        "label": "menu.submenu.batch.storage",
+        "submenus": []
+    }, {
+        "url": "/les/business-process/#/change-volume-bin",
+        "iconClass": null,
+        "label": "menu.submenu.change.volume.bin",
+        "submenus": []
+    }]
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.receipt",
+    "submenus": [{
+        "url": "/les/business-process/#/batch",
+        "iconClass": null,
+        "label": "menu.submenu.list.batch",
+        "submenus": []
+    }, {
+        "url": "/les/business-process/#/danfe/rejection",
+        "iconClass": null,
+        "label": "menu.submenu.reject.danfe",
+        "submenus": []
+    }]
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.confirm.bin",
+    "submenus": [{
+        "url": "/les/business-process/#/confirm-bin",
+        "iconClass": null,
+        "label": "menu.submenu.confirm.bin",
+        "submenus": []
+    }]
+}, {
+    "url": null,
+    "iconClass": "collection-text",
+    "label": "menu.configuration",
+    "submenus": [{
+        "url": "/les/configuration/#/parameters",
+        "iconClass": null,
+        "label": "menu.submenu.system.parameters",
+        "submenus": []
+    }]
+}, {
+    "url": "/les/logout",
+    "iconClass": "power",
+    "label": "menu.logout",
+    "submenus": []
+}]

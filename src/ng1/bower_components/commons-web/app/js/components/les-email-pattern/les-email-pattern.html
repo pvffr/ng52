@@ -1,0 +1,27 @@
+<div>
+    <tags-input ng-hide="hasVirtualKeyboard" placeholder="{{placeholderText | translate}}" 
+        ng-required="isNotValid()"
+        name="{{inputName}}" 
+        id="{{inputEmailId}}" 
+        min-tags="{{minTags}}"
+        register-custom-form-control
+        allowed-tags-pattern="^[A-Za-z0-9]+[A-Za-z0-9._%+-]*@(?:[A-Za-z0-9-]+.)+[A-Za-z]{2,}"
+        on-tag-removed="cleanEmptyModel()"
+        focus-class="tags-input-focused" 
+        ng-disabled="disabled"
+        ng-model="model"></tags-input>
+
+    <tags-input2 ng-show="hasVirtualKeyboard" placeholder="{{placeholderText | translate}}" 
+        ng-required="isNotValid()"
+        name="{{inputName}}" 
+        id="{{inputEmailId}}" 
+        min-tags="{{minTags}}"
+        register-custom-form-control
+        allowed-tags-pattern="^[A-Za-z0-9]+[A-Za-z0-9._%+-]*@(?:[A-Za-z0-9-]+.)+[A-Za-z]{2,}"
+        on-tag-removed="cleanEmptyModel()"
+        focus-class="tags-input-focused" 
+        ng-disabled="disabled"
+        ng-model="model"></tags-input2>
+	
+    <input type="hidden" name="{{inputName}}-hidden" ng-model="model" ng-required="isNotValid()">
+</div>

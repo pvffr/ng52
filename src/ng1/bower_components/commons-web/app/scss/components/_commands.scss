@@ -1,0 +1,48 @@
+.les-commands,
+.les-commands-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+.les-commands {
+    .les-commands-overlay {
+        background: $black;
+        opacity: .3;
+    }
+
+    .les-commands-wrapper {
+        position: relative;
+        z-index: 6;
+        
+        .les-commands-input {
+            width: 400px;
+            height: 38px;
+            margin: 10% auto;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+
+            .chosen-container {
+                height: 60px;
+                padding: 10px;
+
+                .chosen-single {
+                    text-align: center;
+
+                    span {
+                        padding-right: 16px;
+                        margin-right: 0;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    div {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

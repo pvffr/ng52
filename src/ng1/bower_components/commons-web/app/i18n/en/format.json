@@ -1,0 +1,10 @@
+{
+    "format.moment.dateTime": "MM/DD/YYYY hh:mm a",
+    "format.moment.date": "MM/DD/YYYY",
+    "format.dateTime": "MM/dd/yyyy hh:mm a",
+    "format.date": "MM/dd/yyyy",
+    "format.time": "hh:mm a",
+    "format.time-full": "hh:mm:ss a",
+    "format.ordinal": "{{number}}",
+    "format.currency": "0.00"
+}

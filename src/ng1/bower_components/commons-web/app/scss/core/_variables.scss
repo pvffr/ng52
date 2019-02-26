@@ -1,0 +1,116 @@
+/*
+ * colors (hue, saturation, lightness)
+ */
+$black: hsl(0, 0%, 15%);
+$gray-20: hsl(0, 0%, 20%);
+$darkgray: hsl(0, 0%, 25%);
+$gray: hsl(0, 0%, 45%);
+$gray-40: hsl(0, 0%, 40%);
+$gray-50: hsl(0, 0%, 50%);
+$gray-60: hsl(0, 0%, 60%);
+$gray-80: hsl(0, 0%, 80%);
+$gray-84: hsl(0, 0%, 84%);
+$gray-90: hsl(0, 0%, 90%);
+$gray-98: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+$red: hsl(5, 85%, 56%);
+$orange: hsl(29, 100%, 59%);
+$yellow: hsl(42, 90%, 49%);
+
+$green: hsl(82, 55%, 53%);
+$darkgreen: hsl(120, 39%, 54%);
+
+$lighterblue: hsl(218, 40%, 96%);
+$lightblue: hsl(210, 60%, 66%);
+$blue: hsl(216, 42%, 50%);
+$darkblue: hsl(209, 99%, 28%);
+$navyblue: hsl(218, 44%, 23%);
+
+$purple: hsl(290, 100%, 41%);
+/*
+ * font weights
+ */
+$light: 300;
+$normal: 400;
+$bold: 700;
+
+/*
+ * font sizes
+ */
+$min-font-size: 10px;
+$small-font-size: 12px;
+$sub-font-size: 13px;
+$featured-font-size: 14px;
+$default-font-size: 16px;
+$topic-font-size: 18px;
+$unit-font-size: 22px; // same as 1em or 12pt
+$big-font-size: 26px;
+$small-icon-font-size: 22px;
+$medium-icon-font-size: 26px;
+$big-icon-font-size: 32px;
+
+/*
+ * font familys
+ */
+$font-family-roboto: 'Roboto', Helvetica, Arial, sans-serif;
+
+/*
+ * components dimensions
+ */
+$container-width: 1280px;
+$navbar-height: 50px;
+$sidebar-width: 330px;
+
+$default-radius: 3px;
+$table-column-size: 5 10 20 40 80 100;
+$header-height: 132px;
+$header-height-ext: 83px;
+$header-logo-width: 500px;
+$footer-height: 35px;
+
+/*
+ * spaccings
+ */
+$spacing-1: 10px;
+$spacing-2: 20px;
+$spacing-3: 30px;
+$spacing-4: 40px;
+$spacing-5: 50px;
+$spacing-6: 60px;
+$spacings: 0 $spacing-1 $spacing-2 $spacing-3 $spacing-4 $spacing-5 $spacing-6;
+
+
+/*
+ * animations
+ */
+$normal-transition: .3s ease-in-out;
+$faster-transition: .15s ease-in-out;
+
+/*
+ * totem
+ */
+$totem-keyboard-blue: hsl(201, 100%, 39%);
+$totem-keyboard-lightblue: hsl(204, 39%, 49%);
+$totem-keyboard-default-key-size: 70px;
+$totem-keyboard-bar-key-size: 445px;
+
+/*
+ * custom
+ */
+$custom-sequential-circle-bg-color: hsl(33, 100%, 84%);
+$custom-sequential-circle-size: 30px;
+
+
+/*
+ * zindex
+ */
+$z-index-max: 80;
+$z-index-tooltip: 70;
+$z-index-modal: 60;
+$z-index-sidebar: 50;
+$z-index-navbar: 40;
+$z-index-right-sidebar: 30;
+$z-index-overlay: 20;
+$z-index-dropdown: 10;
+$z-index-base: 1;

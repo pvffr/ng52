@@ -1,0 +1,113 @@
+.form-group {
+    .switch {
+        margin-bottom: -5px;
+        margin-left: 10px;
+    }
+
+    .switch-control {
+        margin: 18px 0 4px;
+
+        .switch {
+            margin: 0;
+        }
+    }
+
+    .input-group-addon {
+        background-color: transparent;
+    }
+
+    .btn {
+        i {
+            font-size: 18px;
+        }
+    }
+
+    .help-block {
+        font-size: $small-font-size;
+    }
+
+    &.has-icon-left {
+        position: relative;
+
+        input {
+            padding-left: $spacing-4;
+        }
+
+        .form-control-icon {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            color: $gray-80;
+        }
+    }
+
+    &.no-control-label {
+        margin-top: 24px;
+    }
+
+    &.sequential {
+        position: relative;
+        padding-left: 45px;
+
+        .order-number {
+            position: absolute;
+            top: calc(50% - #{$big-font-size} / 2 + 8px);
+            left: 15px;
+            font-size: $big-font-size;
+            font-weight: $bold;
+        }
+
+        &.circle {
+            padding-left: 55px;
+
+            .order-number {
+                position: absolute;
+                top: calc(50% - #{$custom-sequential-circle-size} / 2);
+                left: 15px;
+                width: $custom-sequential-circle-size;
+                height: $custom-sequential-circle-size;
+                border: 2px desaturate($custom-sequential-circle-bg-color, 15) solid;
+                border-radius: 50%;
+                background-color: $custom-sequential-circle-bg-color;
+                padding: 4px 0;
+                color: $gray-40;
+                font-size: $featured-font-size;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.control-label {
+    display: block;
+
+    small {
+        font-size: inherit;
+        font-weight: $normal;
+        text-transform: none;
+    }
+}
+
+.form-control {
+    height: 40px;
+    border-radius: $default-radius;
+    text-overflow: ellipsis;
+    color: $black;
+
+    &[disabled] {
+        opacity: 0.5;
+    }
+
+    &::placeholder {
+        color: $gray;
+        font-size: $featured-font-size;
+    }
+
+    &textarea {
+        margin: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        resize: none;
+    }
+}
+

@@ -1,0 +1,35 @@
+{
+    "error.is.activated": "Registe is already activated.",
+    "error.is.inactivated": "Registe is already inactivated.",
+
+    "error.access.denied.exception": "You do not have permission to access this feature.",
+    "error.server.error": "A server error occurred.",
+    "error.generic.error": "A unknown error occurred.",
+
+    "messages.error.minLenghtField": "Please fill at least {{minlength}} characters",
+    "messages.error.requiredField": "This field is required.",
+    "messages.error.requiredFields": "Fill out the required fields.",
+    "messages.error.no.results.found": "No result found for '{{text}}'",
+    "messages.error.please.fill.all.fields": "Please fill all fields.",
+
+    "error.defaultMsg": "Add error message for {0}",
+    "error.email": "Enter a valid email address",
+    "error.minlength": "Enter at least {0} characters",
+    "error.maxlength": "You have entered more than the maximum {0} characters",
+    "error.min": "Enter the minimum number of {0}",
+    "error.max": "Enter the maximum number of {0}",
+    "error.required": "This field is required",
+    "error.date": "Enter a valid date",
+    "error.time": "Enter a valid time",
+    "error.pattern": "The entered information do not adheres the correct pattern",
+    "error.number": "Enter a valid number",
+    "error.url": "Enter a valid URL in the format of http(s)://www.google.com",
+    "error.lesEqualsValidator": "Enter the right confirmation",
+    "error.lesMinLengthValidator": "Add at least {0} items to the list",
+    "error.lesEqualsLengthValidator": "Add {0} items to the list",
+    "error.minTags": "Add at least {0} items",
+    "error.maxTags": "Add at max {0} items",
+    "error.leftoverText": "Enter the item correctly",
+    "error.lesAlphanumericValidator": "Enter only alphanumeric characters",
+    "error.lesStringTimeValidator": "Enter the pattern 00d 00h 00m"
+}

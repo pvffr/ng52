@@ -1,0 +1,104 @@
+$step-number-width: 30px;
+$step-number-border-width: 4px;
+
+.steps-indicator {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto $spacing-2 auto;
+
+    li {
+        position: relative;
+        flex-grow: 1;
+        text-align: center;
+
+        &.active {
+            .step-number {
+                background-color: $blue;
+                color: $white;
+            }
+
+            .step-title {
+                font-weight: $bold;
+                color: $navyblue;
+            }
+        }
+
+        &.inactive {
+            .step-number {
+                background-color: $gray;
+                color: $white;
+            }
+        }
+
+        &.done {
+            .step-number {
+                background-color: $darkgreen;
+                color: $white;
+            }
+        }
+        
+        &.danger {
+            .step-number {
+                background-color: $red;
+                color: $white;
+            }
+        }
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: $step-number-width / 2;
+            z-index: -1;
+            content: "";
+            width: 50%;
+            height: 6px;
+            background-color: $white;
+            box-shadow: 5px 2px 5px rgba($black, .2);
+        }
+        
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+
+        .step-number {
+            width: $step-number-width + ($step-number-border-width * 2);
+            height: $step-number-width + ($step-number-border-width * 2);
+            line-height: $step-number-width;
+            border-radius: 50%;
+            border: $step-number-border-width solid $white;
+            background-color: $white;
+            margin: 0 auto; 
+            font-size: $small-font-size;
+            @include shadow(1);
+
+            i {
+                margin-top: -3px;
+            }
+        }
+
+        .step-title {
+            font-size: $featured-font-size;
+            margin-top: $spacing-1;
+        }
+
+        .step-description {
+            opacity: .7;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+{
+    "commands.search.holder": "Digite um comando",
+    "commands.error.command.fail": "Ocorreu um erro ao executar seu comando",
+
+    "commands.command.shipment.panel": "Painel de transporte",
+    "commands.command.shipment.management": "Gerenciar transporte",
+    "commands.command.shipment.unload": "Descarregar",
+    "commands.command.shipment.load": "Carregar",
+    "commands.command.shipment.list": "Reimprimir de romaneio",
+    "commands.command.shipment.report": "Ciclos de transporte",
+
+    "commands.command.reference.document.manual": "Registrar documento manual",
+
+    "commands.command.calendar": "Agenda da doca",
+
+    "commands.command.danfe.rejection": "Recusar nota fiscal",
+
+    "commands.command.inspection.volume": "Conferência de volume",
+    "commands.command.inspection.volume.by.code": "Conferir volume por código",
+    "commands.command.inspection.volume.by.bin": "Conferir volume por bin",
+    "commands.command.inspection.volume.change.bin": "Trocar bin de volume",
+
+    "commands.command.inspection.material.list": "Conferir material",
+    "commands.command.inspection.material.management": "Lotes",
+
+    "commands.command.service.request.management": "Solicitações de serviço",
+    "commands.command.service.request.new": "Solitar novo serviço",
+    "commands.command.service.executions": "Execuções de serviços",
+
+    "commands.command.operation.suplier.management": "Fornecedor",
+    "commands.command.operation.suplier.new": "Cadastrar novo fornecedor",
+    "commands.command.operation.service.management": "Serviços",
+    "commands.command.operation.service.new": "Cadastrar novo serviço",
+    "commands.command.operation.contract.management": "Contratos",
+    "commands.command.operation.contract.new": "Cadastrar novo contrato",
+    "commands.command.operation.material.type.management": "Tipo de material",
+    "commands.command.operation.material.type.new": "Cadastrar novo tipo de material",
+    "commands.command.operation.packing.type.management": "Tipo de embalagem",
+    "commands.command.operation.packing.type.new": "Cadastrar novo tipo de embalagem", 
+    "commands.command.operation.criticality.management": "Criticidade",
+    "commands.command.operation.vehicle-type.management": "Tipo de veículo",
+    "commands.command.operation.vehicle-type.new": "Cadastrar novo tipo de veículo",
+    "commands.command.operation.criticality.new": "Cadastrar nova criticidade",
+    "commands.command.operation.commodity.management": "Commodities",
+    "commands.command.operation.commodity.new": "Cadastrar nova commodity",
+    "commands.command.operation.service.provider.management": "prestadores de serviço",
+    "commands.command.operation.service.provider.new": "Cadastrar novo prestador de serviço",
+    "commands.command.operation.driver.management": "Motoristas",
+    "commands.command.operation.driver.new": "Cadastrar novo motorista",
+
+    "commands.command.transport.request.management": "Solicitações",
+    "commands.command.transport.request.new": "Cadastrar nova solicitação",
+    "commands.command.transport.route.management": "Rotas",
+    "commands.command.transport.route.new": "Cadastrar nova rota",
+    "commands.command.transport.point.management": "Pontos",
+    "commands.command.transport.point.new": "Cadastrar novo ponto",
+    "commands.command.transport.monitor": "Monitorar rotas",
+
+    "commands.command.system.site.management": "Plantas",
+    "commands.command.system.site.new": "Cadastrar nova planta",
+    "commands.command.system.plant.management": "Empresas",
+    "commands.command.system.plant.new": "Cadastrar nova empresa",
+    "commands.command.system.workplace.management": "Locais",
+    "commands.command.system.workplace.new": "Cadastrar novo local",
+    "commands.command.system.calendar.management": "Calendários",
+    "commands.command.system.calendar.new": "Cadastrar novo calendário",
+    "commands.command.system.checklist.management": "Checklist",
+    "commands.command.system.checklist.configure": "Configurar novo checklist",
+    "commands.command.system.checklist.templates.management": "Templates de checklist",
+    "commands.command.system.checklist.templates.new": "Cadastrar novo template de checklist",
+    "commands.command.system.inspection-plan.management": "Planos de inspeção",
+    "commands.command.system.inspection-plan.register": "Cadastrar novo plano de inspeção",
+    "commands.command.system.user.management": "Usuários",
+    "commands.command.system.user.register": "Cadastrar novo usuário",
+    "commands.command.system.profile.management": "Perfis de usuário",
+    "commands.command.system.profile.register": "Cadastrar novo perfil de usuário",
+    
+    "commands.command.portaria.totem": "Totem",
+    "commands.command.portaria.panel": "TV",
+    "commands.command.portaria.configuration": "Configurações TV",
+
+    "commands.command.configuration": "Configurações"
+}

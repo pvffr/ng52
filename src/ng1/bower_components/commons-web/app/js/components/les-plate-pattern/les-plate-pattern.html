@@ -1,0 +1,27 @@
+<div>
+	<tags-input ng-hide="hasVirtualKeyboard" 
+		placeholder="{{placeholderText | translate}}"
+		name="{{inputName}}"  
+		id="{{inputPhoneId}}"
+		ng-required="isNotValid()" 
+        min-tags="{{minTags}}" 
+		on-tag-added="capitalize($tag)"
+        on-tag-removed="cleanEmptyModel()"
+        register-custom-form-control
+		allowed-tags-pattern="^[a-zA-Z]{3}[0-9]{4}$|^(?!.{8})(?=(?:[^0-9]*[0-9]){3})(?=(?:[^a-zA-Z]*[a-zA-Z]){4}).*$"
+        ng-disabled="disabled"
+		ng-model="model"></tags-input>
+
+	<tags-input2 ng-show="hasVirtualKeyboard" 
+		placeholder="{{ placeholderText | translate}}" 
+        name="{{inputName}}" 
+        id="{{inputPhoneId}}" 
+		ng-required="isNotValid()"
+        min-tags="{{minTags}}"
+        on-tag-added="capitalize($tag)"
+        on-tag-removed="cleanEmptyModel()"
+        register-custom-form-control
+        allowed-tags-pattern="^[a-zA-Z]{3}[0-9]{4}$|^(?!.{8})(?=(?:[^0-9]*[0-9]){3})(?=(?:[^a-zA-Z]*[a-zA-Z]){4}).*$"
+        ng-disabled="disabled"
+		ng-model="model"></tags-input2>
+</div>

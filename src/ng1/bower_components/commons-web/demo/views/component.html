@@ -1,0 +1,32 @@
+<div class="box">
+    <uib-tabset>
+        <uib-tab ng-if="componentCtrl.component.demo" index="2" class="col-sm-3 no-padding" heading="Demonstração">
+            <div ng-include="componentCtrl.component.path + componentCtrl.component.demo" class="box-content"></div>
+        </uib-tab>
+
+        <uib-tab ng-if="componentCtrl.component.description" index="3" class="col-sm-3 no-padding" heading="Descrição">
+            <div marked class="box-content" src="componentCtrl.component.path + componentCtrl.component.description"></div>
+        </uib-tab>
+
+        <uib-tab ng-if="componentCtrl.component.files" index="1" class="col-sm-3 no-padding" heading="Código">
+            <div ng-repeat="file in componentCtrl.component.files" class="accordion" ng-init="collapsed = false" ng-class="{ 'collapsed': collapsed }">
+                <div class="accordion-title" ng-click="collapsed = !collapsed">
+                    <span ng-bind="file"></span>
+                    <i class="fa fa-angle-up collapse-icon"></i>
+                </div>
+
+                <div class="accordion-content" style="overflow: auto" dynamic-height="500">
+                    <div hljs hljs-include="componentCtrl.component.path + file"></div>
+                </div>
+            </div>
+        </uib-tab>
+
+        <uib-tab ng-if="componentCtrl.component.test" index="0" class="col-sm-3 no-padding" heading="Teste">
+            <div ng-show="componentCtrl.component.test.length" hljs hljs-include="componentCtrl.component.path + componentCtrl.component.test"></div>
+            
+            <div ng-hide="componentCtrl.component.test.length" class="text-center">
+                <strong>Nenhum teste adicionado :(</strong>
+            </div>
+        </uib-tab>
+    </uib-tabset>
+</div>

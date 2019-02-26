@@ -1,0 +1,50 @@
+// Bootstrap variables overrides
+@import "overwrites/variables";
+
+@import "../../libs/bootstrap-sass/assets/stylesheets/bootstrap"; 
+@import "../../libs/components-font-awesome/scss/font-awesome"; // Deprecated
+
+@import "core/variables";
+@import "core/fonts";
+@import "core/base";
+@import "core/global";
+@import "core/typo";
+
+@import "helpers/mixins";
+@import "helpers/animations";
+@import "helpers/flex";
+@import "helpers/icons";
+@import "helpers/properties";
+
+@import "overwrites/alert";
+@import "overwrites/forms";
+@import "overwrites/tags-input";
+@import "overwrites/tags-input-2";
+@import "overwrites/custom";
+@import "overwrites/chosen";
+@import "overwrites/ui-select-bootstrap";
+@import "overwrites/growl";
+@import "overwrites/datepicker";
+@import "overwrites/timepicker";
+@import "overwrites/modal";
+@import "overwrites/popover";
+@import "overwrites/summernote";
+@import "overwrites/tabs";
+
+@import "components/accordion";
+@import "components/box";
+@import "components/button";
+@import "components/calendar";
+@import "components/chips";
+@import "components/click-overlay";
+@import "components/commands";
+@import "components/dropdown";
+@import "components/header";
+@import "components/footer";
+@import "components/language-selection";
+@import "components/panel";
+@import "components/steps";
+@import "components/table";
+@import "components/pagination";
+@import "components/loader";
+@import "components/active-filters";

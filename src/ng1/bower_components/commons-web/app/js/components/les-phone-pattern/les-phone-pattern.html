@@ -1,0 +1,33 @@
+<div>
+	<tags-input ng-hide="hasVirtualKeyboard" placeholder="{{placeholderText | translate}}" 
+		name="{{inputName}}"  
+		id="{{inputPhoneId}}"
+		ng-required="isNotValid()" 
+        min-tags="{{minTags}}" 
+        focus-class="tags-input-focused"
+        min-length="{{minLength}}"
+        max-length="{{maxLength}}" 
+        register-custom-form-control
+        allowed-tags-pattern="^[0-9]+$" 
+        on-tag-removed="cleanEmptyModel()"
+        s-input-focused
+        ng-disabled="disabled"
+		ng-model="model"></tags-input>
+
+	<tags-input2 ng-show="hasVirtualKeyboard" placeholder="{{ placeholderText | translate}}" 
+        name="{{inputName}}" 
+        id="{{inputPhoneId}}" 
+		ng-required="isNotValid()"
+        min-tags="{{minTags}}"
+        focus-class="tags-input-focused" 
+        min-length="{{minLength}}"
+        max-length="{{maxLength}}" 
+        register-custom-form-control
+        allowed-tags-pattern="^[0-9]+$" 
+        on-tag-removed="cleanEmptyModel()"
+        s-input-focused
+        ng-disabled="disabled"
+        ng-model="model"></tags-input2>
+
+    <input type="hidden" name="{{inputName}}-hidden" ng-model="model" ng-required="isNotValid()">
+</div>

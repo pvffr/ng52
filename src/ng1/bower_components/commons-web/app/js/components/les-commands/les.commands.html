@@ -1,0 +1,17 @@
+<div ng-show="model.visible" class="les-commands">
+    <div ng-click="toggle()" class="les-commands-overlay"></div>
+
+    <div class="les-commands-wrapper">
+        <div class="les-commands-input">
+            <select chosen
+                autofocus
+                placeholder-text-single="'{{translate('commands.search.holder')}}'" 
+                no-results-text="'{{translate('global.noResultsFor')}}'" 
+                ng-model="model.command" 
+                ng-options="command as (command.code + ' - ' + (command.name | translate)) for command in model.commands | orderBy:'code'"
+                ng-change="model.go(model.command)">
+                <option></option>
+            </select>
+        </div>
+    </div>
+</div>

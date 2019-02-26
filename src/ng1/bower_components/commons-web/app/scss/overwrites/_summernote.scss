@@ -1,0 +1,82 @@
+.note-editor {
+
+    &.note-frame {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .note-toolbar-wrapper {
+        .note-toolbar {
+            position: relative !important;
+            z-index: 0;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+
+            .btn-group {
+                margin: 0;
+
+                button {
+                    background-color: lighten($gray-90, 5%);
+                    border-radius: 0;
+                    border: none;
+                    margin: 0 1px;
+                    padding: $spacing-1;
+ 
+                    i {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .note-icon-bold:before ,
+            .note-icon-italic:before ,
+            .note-icon-underline:before ,
+            .note-icon-link:before  {
+                @extend .material-icons;
+                font-size: $default-font-size;
+            }
+        
+            .note-icon-bold:before {
+                content: 'format_bold';
+            }
+
+            .note-icon-italic:before {
+                content: 'format_italic';
+            }
+
+            .note-icon-underline:before {
+                content: 'format_underline';
+            }
+
+            .note-icon-link:before {
+                content: 'insert_link';
+            }
+        }
+    }
+
+    .note-editing-area {
+        border: 1px solid $gray-84;
+        border-radius: $default-radius;
+
+        .note-editable {
+            background-color: transparent;
+        }
+    }
+
+    .note-statusbar,
+    .note-status-output {
+        display: none;  
+    } 
+}
+
+
+.form-group {
+    &.has-error {
+        .note-editor {
+            .note-editing-area {
+                border-color: $red;
+            }
+        }
+    }
+}

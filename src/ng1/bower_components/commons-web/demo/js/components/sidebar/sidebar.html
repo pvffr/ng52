@@ -1,0 +1,31 @@
+<div id="sidebar" ng-show="visible">
+    <click-overlay visible="visible">
+        <ul class="sidebar-content">
+            <li class="sidebar-item-close">
+                <a ui-sref="app.main" ng-click="toggle()">
+                    <img src="/dist/img/logo-okto-white.png" alt="Okto" height="20">
+                </a>
+            </li>
+            <li class="padding-2">
+                <div class="form-group">
+                    <input type="search" class="form-control" ng-model="search" placeholder="Search components">
+                </div>
+            </li>
+            <li ng-repeat="category in menu | filter: search"
+                ng-class="{ active: category.visible }">
+
+                <a href ng-click="toggleSubmenu(category)">
+                    <i class="material-icons margin-right-2">{{icons[category.name]}}</i>
+                    <span class="width-100" ng-bind="category.name"></span>
+                    <i class="material-icons margin-left-2" ng-if="category.items.length">{{ category.visible ? 'keyboard_arrow_down': 'keyboard_arrow_left' }}</i>
+                </a>
+
+                <ul ng-if="category.visible" class="sidebar-nested">
+                    <li ng-repeat="component in category.items">
+                        <a ng-click="goToComponent(component)"  ng-bind="component.title"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </click-overlay>
+</div>

@@ -1,0 +1,36 @@
+/*
+ * flex helpers
+ */
+.horizontal-flex {
+    display: flex;
+    flex-flow: row;
+}
+
+.flex-full-width {
+    width: 100%;
+}
+
+.flex-width-10 {
+	width: 10%;
+	max-width: 10%;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap !important;
+}
+
+.flex-full-height {
+    height: 100%;
+}
+
+.flex-y-center {
+    align-items: center;
+}
+
+.flex-space-between {
+    justify-content: space-between; 
+}
+
+.flex-space-center {
+    justify-content: center; 
+}

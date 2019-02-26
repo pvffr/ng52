@@ -1,0 +1,47 @@
+.active-filters {
+    padding: 5px $spacing-2;
+    background-color: $gray-98;
+    border-top: 1px solid $gray-90;
+    border-bottom: 1px solid $gray-90;
+    font-size: $small-font-size;
+
+    .active-filters-list {
+        flex-grow: 1;
+
+        .active-filters-icon {
+            font-size: $default-font-size;
+        }
+    
+        .active-filters-item {
+            margin-left: $spacing-1;
+            color: $gray-50;
+
+            .active-filter-value {
+                font-weight: $bold;
+                color: $blue;
+            }
+    
+            .active-filters-remove {
+                width: 14px;
+                height: 14px;
+                text-align: center;
+                display: inline-block;
+                line-height: 1;
+                border-radius: 50%;
+                background-color: $blue;
+                
+                i {
+                    vertical-align: middle;
+                    color: $white;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+    .active-filters-clear {
+        margin-left: $spacing-3;
+        font-weight: $bold;
+        text-transform: uppercase;
+    }
+}

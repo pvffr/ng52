@@ -1,0 +1,19 @@
+<div class="modal-header">
+	<h3 class="modal-title" ng-bind="modalOptions.title"></h3>
+    <i class="close-icon fa fa-times-circle" ng-click="modalOptions.cancel()"></i>
+</div>
+<div class="modal-body modal-break-line" ng-class="{ 'modal-break-line': modalOptions.breakLine }">
+    <div class="warning">
+		<p ng-bind="modalOptions.title"></p>
+	</div>
+</div>
+<div class="modal-footer">
+	<div class="row">
+        <div class="col-xs-24 col-sm-12">
+			<button class="btn btn-primary btn-block" id="btnCloseModal" ng-click="modalOptions.confirm()" ng-bind="modalOptions.ok"></button>
+		</div>
+		<div class="col-xs-24 col-sm-12">
+			<button class="btn btn-default btn-block" id="btnCancelModal" ng-click="modalOptions.cancel()" ng-bind="modalOptions.cancel"></button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+body {
+    background: $lighterblue;
+    font-family: $font-family-roboto;
+    color: $gray-40;
+    font-size: $default-font-size;
+    min-height: 100vh;
+}
+
+input, 
+select, 
+textarea {
+    font-size: $featured-font-size;
+}
+
+hr {
+    border-top: 1px $gray-90 solid;
+    margin: $spacing-2 0;   
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    &[ng-href],
+    &[ng-click] {
+        cursor: pointer;
+    }
+
+    &.white, 
+    &.white:hover,
+    &.white:active,
+    &.white:focus {
+        color: $white;
+    }
+}
+
+i {
+    &.white, 
+    &.white:hover, 
+    &.white:active,
+    &.white:focus {
+        color: $white;
+    }
+}

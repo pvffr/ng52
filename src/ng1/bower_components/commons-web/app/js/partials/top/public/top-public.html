@@ -1,0 +1,13 @@
+<div id="navbar">
+    <div class="padding-left-2">
+        <h1 class="navbar-logo">
+            <a title="{{ navbar.home | translate }}" ui-sref="{{publicTopCtrl.initial}}">
+                <img src="assets/img/logo-okto-white.png" alt="Okto" height="20">
+            </a>
+        </h1>
+        <h2 class="navbar-title" translate="{{ publicTopCtrl.model.module }}"></h2>
+    </div>
+    <div class="display-flex">
+        <ng-transclude></ng-transclude>
+    </div>
+</div>

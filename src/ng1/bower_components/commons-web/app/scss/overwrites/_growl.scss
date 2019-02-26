@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    .growl-container.growl-fixed.top-right {
+        max-width: 40%;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .growl-container.growl-fixed.top-right {
+        max-width: 100%;
+        right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .growl-container.growl-fixed.top-right {
+        max-width: 25%;
+        right: 20px;
+    }
+}
+
+.growl-container.growl-fixed.top-right {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    z-index: $z-index-max;
+
+    & > .icon {
+        background: $white;
+    }
+}
+
+.growl-item {
+    @extend .alert;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}

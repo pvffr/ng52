@@ -1,0 +1,42 @@
+.dropdown {
+    position: relative;
+
+    .dropdown-content {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 240px;
+        background-color: $white;
+        border-radius: $default-radius;
+        margin: $spacing-1 0;
+        @extend .slide-down;
+        @include shadow(1);
+
+        &.to-left {
+            left: auto;
+            right: 0;
+        }
+
+        &.to-top {
+            top: auto;
+            bottom: 100%;
+        }
+
+        li {
+            a {
+                padding: $spacing-2;
+                display: block;
+                line-height: 1;
+
+                i {
+                    float: right;   
+                }
+            }
+
+            ul {
+                margin-left: $spacing-2;
+                border-left: 1px solid $gray-90;
+            }
+        }
+    }
+}

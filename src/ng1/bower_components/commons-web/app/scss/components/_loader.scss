@@ -1,0 +1,33 @@
+.loader {
+    padding: $spacing-6 0;
+    text-align: center;
+
+    .loader-spinner {
+        animation: rotation 1.35s linear infinite;
+        stroke: $blue;
+    
+        .loader-circle {
+            stroke-dasharray: 180;
+            stroke-dashoffset: 0;
+            transform-origin: center;
+            animation: turn 1.35s ease-in-out infinite;
+        }
+    }
+}
+
+
+@keyframes turn {
+    0% {
+        stroke-dashoffset: 180;
+    }
+
+    50% {
+        stroke-dashoffset: 45;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: 180;
+        transform: rotate(450deg);
+    }
+}

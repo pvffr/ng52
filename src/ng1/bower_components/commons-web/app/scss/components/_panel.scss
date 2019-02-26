@@ -1,0 +1,75 @@
+$panel-last-call-value-font-color: hsl(60, 100%, 50%);
+$panel-default-font-size: 24px;
+$panel-big-font-size: 48px;
+$panel-small-font-size: 20px;
+$panel-fade-duration: 0.4s;
+$panel-blink-duration: 0.2s;
+
+@-webkit-keyframes blinkPanelCall {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes blinkPanelCall {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.header {
+    &.header-panel {
+        height: $header-height-ext;
+        min-height: $header-height-ext;
+        overflow: hidden;
+        padding: 0;
+        color: $white;
+
+        .title, 
+        .logo {
+            position: absolute;
+            top: 0;
+            height: $header-height-ext;
+            max-height: $header-height-ext;
+            padding: 0;
+        }
+
+        .title {
+            right: 0;
+            width: calc(100% - #{$header-logo-width});
+            background-color: $blue;
+            padding-right: 25px;
+            font-size: $panel-big-font-size;
+
+            .clock {
+                margin: 8px 0;
+                text-transform: uppercase;
+            }
+        }
+
+        .logo {
+            display: flex;
+            left: 0;
+            width: $header-logo-width;
+            background-color: $blue;
+            padding-left: 15px;
+            
+            img {
+                position: relative;
+                top: 21px;
+                left: 10px;
+            }
+
+            span {
+                align-items: center;
+                padding-left: 40px;
+                font-size: 50px;
+            }
+        }
+    }
+}

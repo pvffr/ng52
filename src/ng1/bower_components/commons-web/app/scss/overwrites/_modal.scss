@@ -1,0 +1,70 @@
+
+.modal {
+    z-index: $z-index-modal !important;
+
+    .modal-content {
+        border-radius: 0;
+    
+        .modal-header {
+            @extend .topic;
+            padding-right: 58px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: $featured-font-size;
+    
+            h1, h2, h3 {
+                font-size: 1em;
+            }
+    
+            .close-icon {
+                position: absolute;
+                top: 15px;
+                right: 16px;
+                margin: 0;
+                padding: 4px;
+                text-decoration: none;
+                font-size: 1.5em;
+                cursor: pointer;
+                &:hover,
+                &:active {
+                    color: lighten($gray-90, 4);
+                    text-decoration: none;
+                }
+            }
+        }
+        
+        .modal-body {
+            padding: 15px 20px;
+            font-size: $featured-font-size;
+    
+            .warning {
+                margin-bottom: 20px;
+    
+                p {
+                    text-align: center;
+                }
+            }
+    
+            .data-label {
+                text-transform: none;
+            }
+        }
+    
+        .modal-footer {
+            border: 0;
+        }
+    }
+    
+    .modal-break-line > div.modal-dialog > div.modal-content > div.modal-body {
+        white-space: pre-wrap;
+    }
+    
+    .modal-open {
+        overflow: hidden;
+        padding-right: 0 !important;
+    }
+}
+
+.modal-backdrop {
+    z-index: $z-index-modal - 1 !important;
+}

@@ -1,0 +1,20 @@
+
+h1, 
+h2 {
+    font-size: $big-font-size;
+    display: inline-block;
+    color: $gray-40;
+    margin: 5px 0 $spacing-1;
+}
+
+label,
+.data-label {
+    font-weight: $bold;
+    color: $navyblue;
+    font-size: $small-font-size;
+    margin-bottom: 5px;
+}
+
+small {
+    font-size: $small-font-size;
+}

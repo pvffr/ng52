@@ -1,0 +1,22 @@
+<div id="navbar">
+    <div>
+        <a id="navbar-toggler" class="navbar-item" href ng-click="toggleMenu()">
+            <i class="material-icons">menu</i>
+        </a>
+
+        <h1 class="navbar-logo">
+            <a title="{{ navbar.home | translate }}" ui-sref="app.main">
+                <img src="/dist/img/logo-okto-white.png" alt="Okto" height="20">
+            </a>
+        </h1>
+    </div>
+
+
+    <div class="display-flex">
+        <a class="navbar-item margin-horizontal-2" href ng-click="toggleFullscreen()">
+            <i class="navbar-icon material-icons">{{fullscreen ? 'fullscreen_exit' : 'fullscreen'}}</i>
+        </a>
+    </div>
+
+    <demo-sidebar visible="visible"></demo-sidebar>
+</div>

@@ -1,0 +1,36 @@
+ul.nav.nav-tabs {
+    height: 62px;
+    
+    > li {
+        margin-bottom: 0;
+        
+        &.active {
+            > a,
+            > a:hover,
+            > a:focus { 
+                padding-top: $spacing-2;
+                border-bottom-color: $blue;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+            }
+        }
+
+        > a,
+        > a:hover,
+        > a:focus {
+            padding: $spacing-2;
+            text-transform: none;
+            font-weight: $normal;
+            border: none;
+            border-bottom: 2px solid transparent;
+            margin-right: 0;
+            font-size: $featured-font-size;
+            background-color: $white;
+        }
+    }
+}
+
+.tab-content {
+    padding: 0;
+}

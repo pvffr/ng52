@@ -1,0 +1,49 @@
+.accordion {
+    & > .accordion-title {
+        @extend .topic;
+        position: relative;
+        padding-right: 50px;
+        color: $blue;
+
+        &:hover {
+            color: lighten($blue, 9);
+        }
+
+        &[ng-click] {
+            cursor: pointer;
+        }
+
+        & > .collapse-icon {
+            position: absolute;
+            top: calc(50% - #{$featured-font-size});
+            right: 10px;
+            margin: 0;
+            padding: 0;
+            color: inherit;
+            font-size: calc(2 * #{$featured-font-size});
+            -webkit-transition: -webkit-transform $normal-transition;
+            transition: transform $normal-transition;
+        }
+    }
+
+    & > .accordion-content {
+        max-height: 999px;
+        overflow-y: visible;
+        -webkit-transition: max-height $normal-transition;
+        transition: max-height $normal-transition;
+    }
+
+    &.collapsed {
+        & > .accordion-title {
+            & > .collapse-icon {
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+        }
+
+        & > .accordion-content {
+            overflow-y: hidden;
+            max-height: 0 !important;
+        }
+    }
+}
